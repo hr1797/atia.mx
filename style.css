@@ -1,0 +1,472 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 0.7rem;
+}
+
+nav {
+  background: #405247;
+  font-size: 1.4vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 15vw;
+  padding-left: 2rem;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+/*
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+*/
+
+.fb-button,
+.in-button {
+  display: none;
+}
+
+.item {
+  padding: 1.2rem;
+}
+
+.item.button {
+  border: 2px solid black;
+  margin: 0.2rem 0;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.menu li.subitem a {
+  padding: 2rem;
+}
+
+.toggle {
+  order: 1;
+  font-size: 4vw;
+  padding-right: 2rem;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+  background: #444;
+}
+
+.active .item {
+  display: block;
+}
+
+/*
+.button.secondary {
+  border-bottom: 1px #0080ff solid;
+}
+*/
+
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.4vw;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 0.7rem;
+}
+
+/*
+.subitem a {
+  padding: 90px 0;
+}
+*/
+
+.submenu-active {
+  background-color: #393d3b;
+  border-radius: 1.5rem;
+  margin: 1.5rem;
+}
+
+.banner {
+  height: 50vh;
+  width: 100%;
+  font-size: 4.5vw;
+}
+
+.banner1 img {
+  width: 100%;
+}
+
+.banner2 {
+  background-color: #ebe4dc;
+}
+
+.banner2_column {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 9rem;
+}
+
+.line {
+  margin: 0 4rem;
+}
+
+.line1 {
+  border-bottom: 2px solid black;
+  padding: 4rem 0 0 0;
+}
+
+.line2 {
+  display: none;
+}
+
+.line3 {
+  border-top: 2px solid black;
+  padding: 0 0 4rem 0;
+}
+
+.banner2 {
+  text-align: center;
+}
+
+.banner2 img {
+  display: none;
+}
+
+.banner3 {
+  background-color: #405247;
+  color: white;
+}
+
+.banner3 img,
+.banner2 img {
+  width: 40vw;
+  padding: 0 10vw;
+}
+
+.banner4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #888d79;
+  color: white;
+}
+
+.banner4 h2 {
+  font-size: 5vw;
+  padding: 2rem 0;
+}
+
+.banner4 p {
+  display: none;
+}
+
+.banner4 img {
+  border-radius: 60%;
+  padding: 3rem 0;
+}
+
+.banner4 h3 {
+  font-size: 4vw;
+  border-bottom: 2px solid white;
+  margin: 1rem 0;
+}
+
+footer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 3vw;
+  background-color: #a1a399;
+  color: white;
+}
+
+footer .vertical-line {
+  height: 20%;
+  border-left: 3px solid white;
+}
+
+footer h2 {
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer h3 {
+  padding-top: 3rem;
+}
+
+/* Tablet menu */
+@media (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 10px 15px;
+  }
+
+  .item.button {
+    border: 0;
+  }
+
+  .button a {
+    background: #0080ff;
+    border: 1px royalblue solid;
+  }
+
+  .button.secondary {
+    border: 0;
+  }
+
+  .button.secondary a {
+    background: transparent;
+    border: 1px #0080ff solid;
+  }
+
+  .button a:hover {
+    text-decoration: none;
+  }
+
+  .button:not(.secondary) a:hover {
+    background: royalblue;
+    border-color: darkblue;
+  }
+}
+
+/* Desktop menu */
+@media (min-width: 960px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  .logo {
+    display: contents;
+    order: unset;
+    text-align: center;
+  }
+
+  .logo a img {
+    width: 7vw;
+  }
+
+  .item {
+    order: unset;
+    position: relative;
+    display: block;
+    width: auto;
+    background: transparent;
+  }
+
+  .item.button {
+    display: none;
+  }
+
+  .fb-button,
+  .in-button {
+    display: none;
+    margin: 40px 20vw;
+    padding: 20px 20px;
+    border: 1px solid white;
+  }
+
+  .menu li a {
+    outline: none;
+  }
+
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    background: #111;
+  }
+
+  .toggle {
+    order: unset;
+    display: none;
+  }
+
+  .submenu-active {
+    border-radius: 0;
+  }
+
+  .banner {
+    height: 100vh;
+    font-size: 2.2vw;
+  }
+
+  .banner2 {
+    background-color: #ebe4dc;
+  }
+
+  .banner2,
+  .banner3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .banner2 h2,
+  .banner2 p,
+  .banner3 h2 {
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .banner2 img,
+  .banner3 img {
+    display: inline;
+    width: 40vw;
+  }
+
+  .banner2_column,
+  .banner3_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    text-align: center;
+    padding: 0 5vw;
+  }
+
+  .banner3 .line {
+    border-left: 2px solid white;
+  }
+
+  .line {
+    display: inline;
+    border-left: 3px solid black;
+    height: 90%;
+    width: auto;
+    margin: 0 3vw;
+  }
+
+  .banner3 {
+    background-color: #405247;
+    color: white;
+  }
+
+  .banner4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #888d79;
+    font-size: 2vw;
+    color: white;
+  }
+
+  .banner4 p {
+    display: inline;
+    text-align: left;
+  }
+
+  .banner4 img {
+    border-radius: 0;
+  }
+
+  .item_servicios {
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+  }
+
+  .item_servicios img {
+    padding: 5vh 0;
+  }
+
+  .item_servicios h3 {
+    padding: 1rem 0 9rem 0;
+    font-size: 3vw;
+    text-align: left;
+    border-bottom: 0 solid white;
+  }
+
+  .horizontal-line {
+    border-bottom: 2px solid white;
+    padding: 3vh 0;
+  }
+
+  .banner4 h2 {
+    padding: 10vh 0 0 2vw;
+    align-self: flex-start;
+    width: 20vw;
+    font-size: 4.5vw;
+  }
+
+  footer {
+    height: 100vh;
+    font-size: 2.5vw;
+  }
+}
