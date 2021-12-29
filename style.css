@@ -247,6 +247,37 @@ footer .footer-social-media {
     horizontal-move 5s linear infinite alternate; */
 }
 
+.carousel-outer-container {
+  width: 14vw;
+  display: flex;
+  flex-direction: column;
+  animation: bannermove 15s linear infinite;
+  margin: -50px 60px;
+}
+
+.reverse-carousel {
+  animation: bannermove 15s linear reverse infinite;
+}
+
+.carousel-inner-container {
+  width: inherit;
+  flex-direction: column;
+}
+
+.carousel-inner-container img {
+  width: inherit;
+  padding: 30px 0;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 @keyframes pulse1 {
   0%,
   100% {
